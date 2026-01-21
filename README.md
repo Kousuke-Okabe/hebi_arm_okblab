@@ -18,20 +18,20 @@
 
 ### 実機動作
 tarminal 1
-> ros2 launch hebi_bringup bringup_arm.launch.py hebi_arm:="A-2240-05" use_mock_hardware:=false use_rviz:=false
+> ros2 launch hebi_bringup bringup_arm.launch.py hebi_arm:=A-2240-05 use_mock_hardware:=false use_rviz:=false
 
 terminal 2
-> ros2 launch hebi_bringup move_group.launch.py hebi_arm:="A-2240-05" use_sim_time:=false
+> ros2 launch hebi_bringup move_group.launch.py hebi_arm:=A-2240-05 use_sim_time:=false
 
 terminal 3
 > ros2 launch hebi_arm_okblab hebi_arm_motionplanning.launch.py
 
 ### シミュレーション動作
 tarminal 1
-> ros2 launch hebi_bringup bringup_arm_gazebo.launch.py hebi_arm:="A-2240-05" use_mock_hardware:=false use_rviz:=false
+> ros2 launch hebi_bringup bringup_arm_gazebo.launch.py hebi_arm:=A-2240-05 use_mock_hardware:=false use_rviz:=false
 
 terminal 2
-> ros2 launch hebi_bringup move_group.launch.py hebi_arm:="A-2240-05" use_sim_time:=true
+> ros2 launch hebi_bringup move_group.launch.py hebi_arm:=A-2240-05 use_sim_time:=true
 
 terminal 3
 > ros2 launch hebi_arm_okblab hebi_arm_motionplanning.launch.py
